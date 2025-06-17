@@ -84,11 +84,11 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **cpf_guardiao**: CPF do guardião.
         - **Validação:** Opcional, Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
     - **status**: Status do aluno.
-        - **Validação:** Opcional, Seleção entre 'Ativo', 'Inativo', 'Graduado', 'Suspenso', 'Transferido'.
+        - **Validação:** Obrigatório, Seleção entre 'Ativo', 'Inativo', 'Graduado', 'Suspenso', 'Transferido'.
     - **escola_id**: Relacionamento com a escola.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `escola`.
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `escola`.
     - **cep**: CEP do endereço do aluno.
-        - **Validação:** Opcional, Formato de CEP válido `^\\d{5}-?\\d{3}$`.
+        - **Validação:** Obrigatório, Formato de CEP válido `^\\d{5}-?\\d{3}$`.
     - **tipo_zona_residencia**: Tipo de zona de residência.
         - **Validação:** Opcional, Seleção entre 'Urbana' e 'Rural'.
     - **numero_endereco**: Número do endereço.
