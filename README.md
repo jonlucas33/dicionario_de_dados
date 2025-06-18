@@ -229,12 +229,24 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da disciplina.
-        - **Validação:** Obrigatório, Texto.
+        - **Validação:** Obrigatório, String, Máximo de 255 caracteres.
     - **carga_horaria**: Carga horária da disciplina.
         - **Validação:** Obrigatório, Número inteiro.
     - **instituicao_id**: Relacionamento com a instituição.
-        - **Validação:** Obrigatório, Chave estrangeira para a coleção `instituicao`.
-
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção 'instituicao'.
+    - **date_created**: Campo apenas para visualização da data de criação da disciplina.
+    - **user_created**: Relacionamento com directus_users.
+    - **date_updated**: Campo apenas para visualização da data de atualização da disciplina.
+    - **user_updated**: Relacionamento com directus_users.
+    - **nota_registrada**: Relacionamento com nota_registrada através da chave forte 'disciplina_id'.
+    - **professor_disciplina**: Relacionamento com professor_disciplina.
+    - **nota_conceitual**: Relacionamento com nota_conceitual através da chave forte 'disciplina_id'.
+    - **frequencia**: Relacionamento com frequencia através da chave forte 'disciplina_id'.
+    - **frequencia_disciplina**: Relacionamento com frequencia_disciplina através da chave forte 'disciplina_id'.
+    - **frequencia_professor**: Relacionamento com frequencia_professor através da chave forte 'disciplina_id'.
+    - **feedback_aluno**: Relacionamento com feedback_aluno através da chave forte 'disciplina_id'.
+    - **nota_numerica**: Relacionamento com numerica através da chave forte 'disciplina_id'.
+    - **nota_disciplina**: Relacionamento com disciplina através da chave forte 'disciplina_id'.
 ---
 
 ### **escola**
