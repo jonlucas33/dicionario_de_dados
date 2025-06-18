@@ -28,7 +28,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **sexo**: Sexo do aluno.
         - **Validação:** Obrigatório, Apenas 'Masculino' ou 'Feminino'.
     - **codigo_inep**: Código INEP do aluno.
-        - **Validação:** Opcional, Exatamente 9 dígitos numéricos.
+        - **Validação:** Opcional, Exatamente 12 dígitos numéricos.
     - **tipo_sanguineo**: Tipo sanguíneo do aluno.
         - **Validação:** Opcional, Seleção entre as opções (A+, A-, B+, B-, AB+, AB-, O+, O-).
     - **numero_sus**: Número do SUS do aluno.
