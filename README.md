@@ -58,7 +58,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **nome_contato_emergencia**: Nome do contato de emergência.
         - **Validação:** Opcional, String, Minímo 3 caracteres e Máximo de 100 caracteres, Apenas letras e espaços.
     - **telefone_contato_emergencia**: Telefone do contato de emergência.
-        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **parentesco_contato_emergencia**: Parentesco do contato de emergência.
         - **Validação:** Opcional, Texto, Máximo de 20 caracteres.
     - **tem_restricao_atividade_fisica**: Indica se há restrição para atividades físicas.
@@ -71,14 +71,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
     - **email**: E-mail do aluno.
         - **Validação:** Opcional, String, Máximo de 255 caracteres. Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
-    - **telefone**, **telefone2**: Telefones de contato.
-        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+    - **telefone**, **telefone_2**: Telefones de contato.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **endereco**: Endereço do aluno.
         - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **nome_guardiao**: Nome do guardião.
         - **Validação:** Opcional, String, Apenas letras e espaços, entre 3 e 100 caracteres.
     - **telefone_guardiao**: Telefone do guardião.
-        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **email_guardiao**: E-mail do guardião.
         - **Validação:** Opcional, String, Máximo de 255 caracteres. Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
     - **cpf_guardiao**: CPF do guardião.
@@ -108,7 +108,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **cpf_pai**: CPF do pai.
         - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
     - **telefone_pai**: Telefone do pai.
-        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **nome_mae**: Nome da mãe.
         - **Validação:** Opcional, String, Minímo 3 caracteres e Máximo de 100 caracteres, Apenas letras e espaços.
     - **email_mae**: E-mail da mãe.
@@ -116,7 +116,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **cpf_mae**: CPF da mãe.
         - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
     - **telefone_mae**: Telefone da mãe.
-        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **numero_rg**: Número do RG.
         - **Validação:** Opcional, String, Máximo de 15 caracteres.
     - **estado_rg**: Estado de emissão do RG.
