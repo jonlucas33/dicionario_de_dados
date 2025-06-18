@@ -88,7 +88,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **escola_id**: Relacionamento com a escola.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `escola`.
     - **cep**: CEP do endereço do aluno.
-        - **Validação:** Obrigatório, String, Máximo de 10 caracteres. Formato de CEP válido `^\\d{5}-?\\d{3}$`.
+        - **Validação:** Obrigatório, String, Máximo de 8 caracteres. Formato de CEP válido `^\\d{5}-?\\d{3}$`.
     - **tipo_zona_residencia**: Tipo de zona de residência.
         - **Validação:** Opcional, Seleção entre 'Urbana' e 'Rural'.
     - **numero_endereco**: Número do endereço.
