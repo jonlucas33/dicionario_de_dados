@@ -120,7 +120,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **numero_rg**: Número do RG.
         - **Validação:** Opcional, String, Máximo de 15 caracteres.
     - **estado_rg**: Estado de emissão do RG.
-        - **Validação:** Opcional, String, exatamente 2 caracteres.
+        - **Validação:** Opcional, Seleção entre multiplas opções, que são as siglas de todos os estados brasileiros.
     - **data_de_expedicao**: Data de expedição do RG.
         - **Validação:** Opcional, Data.
     - **orgao_expedidor**: Órgão expedidor do RG.
@@ -130,7 +130,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **certidao_de_nascimento**: Número da certidão de nascimento.
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
     - **tipo_deficiencia**: Tipo de deficiência do aluno.
-        - **Validação:** Opcional, Seleção de múltiplas opções.
+        - **Validação:** Opcional, Seleção entre múltiplas opções.
     - **feedback_aluno**: Relacionamento com a feedback_aluno.
         - **Validação:** Opcional, Chave estrangeira para a coleção 'feedback-aluno'.
     - **nota_numerica**: Relacionamento com a nota_numerica.
