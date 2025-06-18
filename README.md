@@ -33,16 +33,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Opcional, Seleção entre as opções (A+, A-, B+, B-, AB+, AB-, O+, O-).
     - **numero_sus**: Número do SUS do aluno.
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
-    - **alergia_medicacao**: Indica se o aluno possui algum tipo de alergia.
-        - **Validação:** Opcional, Booleano, (Verdadeiro/Falso).
+    - **alergia_medicacao**: Indica se o aluno tem alergia a alguma medicação.
+        - **Validação:** Opcional, Booleano (Verdadeiro/Falso).
     - **medicacoes_alergia**: Descrição de medicamentos para alergia.
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
     - **alergia_comida**: Indica se o aluno tem alergia a alguma comida.
         - **Validação:** Opcional, Booleano (Verdadeiro/Falso).
     - **comidas_alergia**: Descrição das comidas às quais o aluno tem alergia.
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
-    - **alergia_medicacao**: Indica se o aluno tem alergia a alguma medicação.
-        - **Validação:** Opcional, Booleano (Verdadeiro/Falso).
     - **alergia_outros**: Indica se o aluno tem outras alergias.
         - **Validação:** Opcional, Booleano (Verdadeiro/Falso).
     - **outros_alergia**: Descrição de outras alergias.
