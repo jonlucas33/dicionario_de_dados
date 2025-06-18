@@ -298,8 +298,8 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **frequencia**: Relacionamento com frequencia através da chave forte 'escola_id'.
     - **frequencia_aluno**: Relacionamento com frequencia_aluno através da chave forte 'escola_id'.
     - **frequencia_geral**: Relacionamento com frequencia_geral através da chave forte 'escola_id'.
-    - **frequencia_disciplina**: Relacionamento com frequencia_disciplina através da chave forte 'disciplina_id'.
-    - **frequencia_professor**: Relacionamento com frequencia_professor através da chave forte 'disciplina_id'.
+    - **frequencia_disciplina**: Relacionamento com frequencia_disciplina através da chave forte 'escola_id'.
+    - **frequencia_professor**: Relacionamento com frequencia_professor através da chave forte 'escola_id'.
     - **aluno**: Relacionamento com aluno através da chave forte 'escola_id'.
     - **servidor**: Relacionamento com servidor através da chave forte 'escola_id'.
     - **feedback_aluno**: Relacionamento com feedback_aluno através da chave forte 'escola_id'.
