@@ -159,7 +159,10 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `disciplina`.
     - **serie_id**: Relacionamento com a série.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `serie`.
-
+    - **date_created**: Campo apenas para visualização da data de criação da BNCC.
+    - **user_created**: Relacionamento com directus_users.
+    - **date_updated**: Campo apenas para visualização da data de atualização da BNCC
+    - **user_updated**: Relacionamento com directus_users.
 ---
 
 ### **conteudo**
