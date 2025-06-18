@@ -255,20 +255,22 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da escola.
-        - **Validação:** Obrigatório, Texto, Máximo de 20 caracteres.
+        - **Validação:** Obrigatório, String, Máximo de 255 caracteres.
     - **razao_social**: Razão social da escola.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **sigla**: Sigla da escola.
         - **Validação:** Opcional, Texto, Máximo de 10 caracteres.
     - **cnpj**: CNPJ da escola.
-        - **Validação:** Opcional, Exatamente 14 dígitos numéricos.
+        - **Validação:** Obrigatório, Exatamente 14 dígitos numéricos.
     - **codigo_inep**: Código INEP da escola.
         - **Validação:** Opcional, Exatamente 8 dígitos numéricos.
     - **idpes**: Identificador da escola.
         - **Validação:** Opcional, Número inteiro.
     - **instituicao_id**: Relacionamento com a instituição.
-        - **Validação:** Obrigatório, Chave estrangeira para a coleção `instituicao`.
-
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção 'instituicao'.
+    - **cep**: CEP do endereço do aluno.
+        - **Validação:** Obrigatório, String, Máximo de 8 caracteres. Formato de CEP válido `^\\d{5}-?\\d{3}$`.
+     
 ---
 
 ### **frequencia**
