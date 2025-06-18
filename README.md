@@ -282,6 +282,29 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **estado**: Estado do endereço.
         - **Validação:** Opcional, Seleção entre multiplas opções, que são as siglas de todos os estados brasileiros.
+    - **telefone** e **telefone_2**: Telefones de contato da escola.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+    - **instituicao_id**: Relacionamento com a instituição.
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção 'instituicao'.
+    - **date_created**: Campo apenas para visualização da data de criação da disciplina.
+    - **user_created**: Relacionamento com directus_users.
+    - **date_updated**: Campo apenas para visualização da data de atualização da disciplina.
+    - **user_updated**: Relacionamento com directus_users.
+    - **matricula**: Relacionamento com matricula através da chave forte 'escola_id'.
+    - **escola_professor**: Relacionamento com professor.
+    - **pre_matricula**: Relacionamento com pre_matricula através da chave forte 'escola_id'.
+    - **nota_geral**: Relacionamento com nota_geral através da chave forte 'escola_id'.
+    - **nota_conceitual**: Relacionamento com nota_conceitual através da chave forte 'escola_id'.
+    - **frequencia**: Relacionamento com frequencia através da chave forte 'escola_id'.
+    - **frequencia_aluno**: Relacionamento com frequencia_aluno através da chave forte 'escola_id'.
+    - **frequencia_geral**: Relacionamento com frequencia_geral através da chave forte 'escola_id'.
+    - **frequencia_disciplina**: Relacionamento com frequencia_disciplina através da chave forte 'disciplina_id'.
+    - **frequencia_professor**: Relacionamento com frequencia_professor através da chave forte 'disciplina_id'.
+    - **aluno**: Relacionamento com aluno através da chave forte 'escola_id'.
+    - **servidor**: Relacionamento com servidor através da chave forte 'escola_id'.
+    - **feedback_aluno**: Relacionamento com feedback_aluno através da chave forte 'escola_id'.
+    - **nota_numerica**: Relacionamento com numerica através da chave forte 'escola_id'.
+    - **nota_disciplina**: Relacionamento com disciplina através da chave forte 'escola_id'.
 ---
 
 ### **frequencia**
