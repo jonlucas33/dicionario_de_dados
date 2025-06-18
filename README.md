@@ -261,22 +261,22 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome associado à matrícula.
-        - **Validação:** Obrigatório, Texto, Máximo de 100 caracteres.
+        - **Validação:** Obrigatório, String, Apenas letras e espaços, entre 3 e 100 caracteres.
     - **codigo_de_matricula**: Código da matrícula.
-        - **Validação:** Obrigatório, Texto, Máximo de 100 caracteres.
+        - **Validação:** Obrigatório, String, Máximo de 100 caracteres.
     - **data_matricula**: Data da realização da matrícula.
         - **Validação:** Obrigatório, Data e Hora.
     - **situacao**: Situação atual da matrícula.
-        - **Validação:** Obrigatório, Seleção de opções como 'PENDENTE', 'CURSANDO', 'APROVADO', etc..
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'PENDENTE', 'CURSANDO', 'APROVADO', etc..
     - **status**: Status da matrícula.
-        - **Validação:** Opcional, Seleção de opções como 'ativo', 'Inativo', 'Graduado', etc..
+        - **Validação:** Opcional, String, Seleção entre as opções 'ativo', 'Inativo', 'Graduado', etc..
     - **escola_id**, **aluno_id**, **curso_id**, **turma_id**, **series_id**: Chaves estrangeiras obrigatórias para `escola`, `aluno`, `curso`, `turma` e `serie`.
     - **pre_matricula_id**: Relacionamento com pré-matrícula.
         - **Validação:** Opcional, Chave estrangeira única para `pre_matricula`.
     - **instituicao_id**: Relacionamento com instituição.
         - **Validação:** Opcional, Chave estrangeira para `instituicao`.
     - **observacoes**: Observações sobre a matrícula.
-        - **Validação:** Opcional, Texto, Máximo de 200 caracteres.
+        - **Validação:** Opcional, String, Máximo de 200 caracteres.
 
 ---
 
@@ -286,19 +286,19 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome do professor.
-        - **Validação:** Obrigatório, Texto, Apenas letras e espaços, entre 3 e 100 caracteres.
+        - **Validação:** Obrigatório, String, Apenas letras e espaços, entre 3 e 100 caracteres.
     - **codigo_inep**: Código INEP do professor.
-        - **Validação:** Obrigatório, Exatamente 9 dígitos numéricos.
+        - **Validação:** Obrigatório, String, Exatamente 12 dígitos numéricos.
     - **data_nascimento**: Data de nascimento do professor.
         - **Validação:** Obrigatório, Data.
     - **email**: E-mail do professor.
-        - **Validação:** Opcional, Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres. Formato de e-mail válido ^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$.
     - **telefone**: Telefone do professor.
-        - **Validação:** Opcional, Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **endereco**: Endereço do professor.
-        - **Validação:** Opcional, Texto, Máximo de 255 caracteres.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **status**: Status do professor.
-        - **Validação:** Opcional, Seleção entre 'ATIVO', 'INATIVO', etc..
+        - **Validação:** Opcional, String, Seleção entre as opções 'ATIVO', 'INATIVO', etc..
 
 ---
 
@@ -308,9 +308,9 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da regra de avaliação.
-        - **Validação:** Obrigatório, Texto.
+        - **Validação:** Obrigatório, String, Máximo de 100 caracteres.
     - **tipo_nota**: Como a nota será registrada.
-        - **Validação:** Obrigatório, Seleção de opções como 'Numérica', 'Conceitual', etc..
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Numérica', 'Conceitual', etc..
     - **nota_minima**: Nota mínima para aprovação.
         - **Validação:** Obrigatório, Número decimal.
     - **nota_maxima**: Nota máxima possível.
@@ -320,9 +320,13 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **casas_decimais**: Número de casas decimais para as notas.
         - **Validação:** Obrigatório, Número inteiro.
     - **formula_media**: Fórmula para cálculo da média final.
-        - **Validação:** Obrigatório, Seleção de opções como 'Média aritmética', etc..
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Média aritmética', etc.
+    - **arredondamento_por_etapa**: Arredondamento por Etapa
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Arededondar para o inteiro mais próximo', etc.
+    - **arredondamento_geral**
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Arededondar para o inteiro mais próximo', etc.
     - **tipo_frequencia**: Como a frequência é calculada.
-        - **Validação:** Obrigatório, Seleção entre 'Diária' e 'Disciplina'.
+        - **Validação:** Obrigatório, String, Botão de seleção única entre 'Diária' e 'Disciplina'.
     - **usa_frequencia_para_passar**: Define se a frequência é critério de aprovação.
         - **Validação:** Obrigatório, Booleano.
     - **porcentagem_frequencia**: Porcentagem mínima de frequência.
@@ -330,13 +334,13 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **numero_atividades**: Quantidade de atividades avaliativas.
         - **Validação:** Obrigatório, Número inteiro.
     - **formula_recuperacao**: Como a nota de recuperação é calculada.
-        - **Validação:** Obrigatório, Seleção de múltiplas opções.
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Recuperação soma com atividades', etc.
     - **tipo_parecer**: Como o parecer descritivo é aplicado.
-        - **Validação:** Obrigatório, Seleção de múltiplas opções.
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Um parecer por etapa, geral', etc.
     - **tipo_progressao**: Como o aluno progride de ano/série.
-        - **Validação:** Obrigatório, Seleção de múltiplas opções.
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Continuada', 'Não continuada', etc.
     - **recuperacao_paralela**: Como a recuperação paralela funciona.
-        - **Validação:** Obrigatório, Seleção de múltiplas opções.
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Não usar recuperação paralela', etc.
     - **instituicao_id**: Relacionamento com a instituição.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `instituicao`.
 
@@ -348,7 +352,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da série.
-        - **Validação:** Obrigatório, Texto.
+        - **Validação:** Obrigatório, String, Máximo de 100 caracteres.
     - **idade_padrao**, **idade_minima**, **idade_maxima**: Idades de referência para a série.
         - **Validação:** Obrigatório, Número inteiro.
     - **bloquear_idade_fora_do_limite**: Bloqueia matrícula de alunos com idade fora do limite.
@@ -368,21 +372,21 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da turma.
-        - **Validação:** Obrigatório, Texto.
+        - **Validação:** Obrigatório, String, Máximo de 100 caracteres.
     - **abreviacao**: Abreviação do nome da turma.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 6 caracteres.
     - **codigo_inep**: Código INEP da turma.
-        - **Validação:** Opcional, Exatamente 12 dígitos numéricos.
+        - **Validação:** Opcional, String, Máximo de 15 dígitos numéricos.
     - **sala**: Sala da turma.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **ano**: Ano letivo da turma.
         - **Validação:** Obrigatório, Número inteiro (mínimo 2000).
     - **periodo**: Período da turma.
-        - **Validação:** Obrigatório, Seleção entre 'Manhã', 'Tarde', 'Noite', 'Integral'.
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Manhã', 'Tarde', 'Noite', 'Integral'.
     - **estudantes_max**, **estudantes_excesso**, **estudantes_pcd**: Limites de estudantes na turma.
         - **Validação:** Obrigatório, Número inteiro.
     - **dias_da_semana**: Dias em que a turma tem aula.
-        - **Validação:** Obrigatório, Seleção de múltiplas opções.
+        - **Validação:** Obrigatório, JSON, Menu suspenso (múltiplo).
     - **multiseriado**, **lista_alternativa_disciplinas**: Indicadores de características da turma.
         - **Validação:** Opcional, Booleano.
     - **escola_id**, **serie_id**: Chaves estrangeiras obrigatórias para `escola` e `serie`.
@@ -447,19 +451,19 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (Integer).
         - **Validação:** Obrigatório, Autoincremento, Único.
     - **status**: Status do registro.
-        - **Validação:** Obrigatório, Seleção entre 'published', 'draft', 'archived'. 
+        - **Validação:** Obrigatório, String, Seleção entre as opções 'Publicado', 'Rascunho' e 'Arquivado'. 
     - **sort**: Campo para ordenação.
         - **Validação:** Opcional, Número inteiro. 
     - **name**: Nome do responsável.
-        - **Validação:** Opcional, Texto. 
+        - **Validação:** Opcional, String, Máximo de 100 caracteres. 
     - **doc_id**: CNPJ ou CPF.
-        - **Validação:** Obrigatório, Único, Indexado, Texto. 
+        - **Validação:** Obrigatório, String, Único, Indexado. 
     - **phone**: Telefone de contato.
-        - **Validação:** Opcional, Único, Formato `XX XXXXX-XXXX`. 
+        - **Validação:** Opcional, String, Único, Formato de telefone válido ^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$.
     - **cidade**: Cidade.
-        - **Validação:** Opcional, Texto. 
+        - **Validação:** Opcional, String, Máximo de 100 caracteres. 
     - **UF**: Unidade Federativa.
-        - **Validação:** Opcional, Seleção de opções (ex: 'PE'). 
+        - **Validação:** Opcional, String, Seleção entre as opções 'AC', 'AL', etc. 
 
 ---
 
