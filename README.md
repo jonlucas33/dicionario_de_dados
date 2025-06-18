@@ -146,15 +146,15 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **codigo**: Código da competência da BNCC.
-        - **Validação:** Obrigatório, Texto.
+        - **Validação:** Obrigatório, String, Máximo de 255 caracteres.
     - **objetivo**: Objetivo de aprendizagem da BNCC.
         - **Validação:** Obrigatório, Texto.
     - **area_de_conhecimento**: Área de conhecimento.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **campos_de_acao**: Campos de ação.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **objetos_de_conhecimento**: Objetos de conhecimento.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **disciplina_id**: Relacionamento com a disciplina.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `disciplina`.
     - **serie_id**: Relacionamento com a série.
