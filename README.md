@@ -104,33 +104,39 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **nome_pai**: Nome do pai.
         - **Validação:** Opcional, Texto, Apenas letras e espaços, entre 3 e 100 caracteres.
     - **email_pai**: E-mail do pai.
-        - **Validação:** Opcional, Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres. Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
     - **cpf_pai**: CPF do pai.
-        - **Validação:** Opcional, Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
     - **telefone_pai**: Telefone do pai.
-        - **Validação:** Opcional, Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **nome_mae**: Nome da mãe.
-        - **Validação:** Opcional, Texto, Apenas letras e espaços, entre 3 e 100 caracteres.
+        - **Validação:** Opcional, String, Minímo 3 caracteres e Máximo de 100 caracteres, Apenas letras e espaços.
     - **email_mae**: E-mail da mãe.
-        - **Validação:** Opcional, Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres. Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
     - **cpf_mae**: CPF da mãe.
-        - **Validação:** Opcional, Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
+        - **Validação:** Opcional, String, Máximo de 11 caracteres. Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
     - **telefone_mae**: Telefone da mãe.
-        - **Validação:** Opcional, Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
+        - **Validação:** Opcional, String, Máximo de 15 caracteres. Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **numero_rg**: Número do RG.
-        - **Validação:** Opcional, Único, Texto, Máximo de 15 caracteres.
+        - **Validação:** Opcional, String, Máximo de 15 caracteres.
     - **estado_rg**: Estado de emissão do RG.
-        - **Validação:** Opcional, Texto, Máximo de 2 caracteres.
+        - **Validação:** Opcional, String, exatamente 2 caracteres.
     - **data_de_expedicao**: Data de expedição do RG.
         - **Validação:** Opcional, Data.
     - **orgao_expedidor**: Órgão expedidor do RG.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **tipo_responsavel**: Tipo de responsável pelo aluno.
         - **Validação:** Opcional, Seleção entre 'Pai', 'Mãe', 'Ambos', 'Outro'.
     - **certidao_de_nascimento**: Número da certidão de nascimento.
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
     - **tipo_deficiencia**: Tipo de deficiência do aluno.
         - **Validação:** Opcional, Seleção de múltiplas opções.
+    - **feedback_aluno**: Relacionamento com a feedback_aluno.
+        - **Validação:** Opcional, Chave estrangeira para a coleção 'feedback-aluno'.
+    - **nota_numerica**: Relacionamento com a nota_numerica.
+        - **Validação:** Opcional, Chave estrangeira para a coleção 'nota_numerica'.
+    - **nota_disciplina**: Relacionamento com a nota_disciplina.
+        - **Validação:** Opcional, Chave estrangeira para a coleção 'nota_disciplina'.
 
 ---
 
