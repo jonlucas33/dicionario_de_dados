@@ -273,14 +273,15 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **endereco**: Endereço da escola.
         - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **numero_endereco**: Número do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **complemento**: Complemento do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres. 
+        - **Validação:** Opcional, String, Máximo de 100 caracteres. 
     - **bairro**: Bairro do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **cidade**: Cidade do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
-    
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
+    - **estado**: Estado do endereço.
+        - **Validação:** Opcional, Seleção entre multiplas opções, que são as siglas de todos os estados brasileiros.
 ---
 
 ### **frequencia**
