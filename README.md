@@ -92,15 +92,15 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **tipo_zona_residencia**: Tipo de zona de residência.
         - **Validação:** Opcional, Seleção entre 'Urbana' e 'Rural'.
     - **numero_endereco**: Número do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **cpf**: CPF do aluno.
         - **Validação:** Opcional, Único, Formato de CPF válido `^\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}$`.
     - **bairro**: Bairro do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **cidade**: Cidade do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **complemento**: Complemento do endereço.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Máximo de 100 caracteres.
     - **nome_pai**: Nome do pai.
         - **Validação:** Opcional, Texto, Apenas letras e espaços, entre 3 e 100 caracteres.
     - **email_pai**: E-mail do pai.
@@ -268,9 +268,19 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Opcional, Número inteiro.
     - **instituicao_id**: Relacionamento com a instituição.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção 'instituicao'.
-    - **cep**: CEP do endereço do aluno.
+    - **cep**: CEP do endereço da escola.
         - **Validação:** Obrigatório, String, Máximo de 8 caracteres. Formato de CEP válido `^\\d{5}-?\\d{3}$`.
-     
+    - **endereco**: Endereço da escola.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
+    - **numero_endereco**: Número do endereço.
+        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+    - **complemento**: Complemento do endereço.
+        - **Validação:** Opcional, Texto, Máximo de 100 caracteres. 
+    - **bairro**: Bairro do endereço.
+        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+    - **cidade**: Cidade do endereço.
+        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+    
 ---
 
 ### **frequencia**
