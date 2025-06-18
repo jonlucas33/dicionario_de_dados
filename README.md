@@ -710,13 +710,13 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da pessoa autorizada.
-        - **Validação:** Obrigatório, Texto, Máximo de 100 caracteres. 
+        - **Validação:** Obrigatório, Texto, Mínimo de 3, Máximo de 100 caracteres. 
     - **parentesco**: Grau de parentesco com o aluno.
-        - **Validação:** Obrigatório, Texto, Máximo de 20 caracteres. 
+        - **Validação:** Obrigatório, Texto, Mínimo de 3, Máximo de 20 caracteres. 
     - **telefone**: Telefone da pessoa autorizada.
-        - **Validação:** Obrigatório, Texto, Máximo de 15 caracteres. 
+        - **Validação:** Obrigatório, Texto, Exatos 11 dígitos. 
     - **email**: Email da pessoa autorizada.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres. 
+        - **Validação:** Opcional, Texto, Máximo de 100 caracteres, Regex de ^[\w\.-]+@[\w\.-]+\.\w{2,}$ . 
     - **aluno_id**: Relacionamento com o aluno.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `aluno`. 
 
@@ -738,8 +738,8 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **data_pre_matricula**: Data da realização da pré-matrícula.
         - **Validação:** Obrigatório, Data e Hora. 
     - **periodo**: Período desejado.
-        - **Validação:** Opcional, Seleção entre 'Manhã', 'Tarde', 'Noite', 'Integral'. 
-    - **escola_id**, **aluno_id**, **curso_id**, **series_id**: Chaves estrangeiras obrigatórias para `escola`, `aluno`, `curso`, e `serie`. 
+        - **Validação:** Obrigatório, Seleção entre 'Manhã', 'Tarde', 'Noite', 'Integral'. 
+    - **escola_id**, **aluno_id**, **curso_id**, **series_id**, **instituicao_id**: Chaves estrangeiras obrigatórias para `escola`, `aluno`, `curso`, e `serie`. 
 
 ---
 
@@ -751,9 +751,9 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **carga_horaria**: Carga horária do professor para aquela disciplina.
         - **Validação:** Obrigatório, Número inteiro. 
     - **professor_id**: Relacionamento com o professor.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `professor`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `professor`. 
     - **disciplina_id**: Relacionamento com a disciplina.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `disciplina`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `disciplina`. 
 
 ---
 
@@ -765,9 +765,9 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **carga_horaria**: Carga horária da disciplina para aquela série.
         - **Validação:** Obrigatório, Número inteiro. 
     - **serie_id**: Relacionamento com a série.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `serie`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `serie`. 
     - **disciplina_id**: Relacionamento com a disciplina.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `disciplina`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `disciplina`. 
 
 ---
 
@@ -783,18 +783,18 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome do servidor.
-        - **Validação:** Obrigatório, Texto, Máximo de 100 caracteres. 
+        - **Validação:** Obrigatório, Texto, Mínimo de 3, Máximo de 100 caracteres. 
     - **cpf**: CPF do servidor.
-        - **Validação:** Obrigatório, Único, Texto, Máximo de 255 caracteres. 
+        - **Validação:** Obrigatório, Único, Texto, Exatamente 11 dígitos. 
     - **data_de_nascimento**: Data de nascimento do servidor.
         - **Validação:** Obrigatório, Data. 
     - **escola_id**, **instituicao_id**: Chaves estrangeiras obrigatórias para `escola` e `instituicao`. 
     - **funcao_servidor_id**: Relacionamento com a função do servidor.
-        - **Validação:** Opcional, Chave estrangeira para `funcao_servidor`. 
+        - **Validação:** Obrigatório, Chave estrangeira para `funcao_servidor`. 
     - **email**: E-mail do servidor.
-        - **Validação:** Opcional, Texto, Máximo de 255 caracteres. 
+        - **Validação:** Opcional, Texto, Máximo de 255 caracteres, Regex de ^[\w\.-]+@[\w\.-]+\.\w{2,}$
     - **telefone**: Telefone do servidor.
-        - **Validação:** Opcional, Texto, Máximo de 15 caracteres. 
+        - **Validação:** Opcional, Texto, Exatamente 11 dígitos. 
     - **endereco**: Endereço do servidor.
         - **Validação:** Opcional, Texto, Máximo de 255 caracteres. 
     - **tipo_contrato**: Tipo de contrato do servidor.
@@ -812,9 +812,9 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **carga_horaria**: Carga horária da disciplina para aquela turma.
         - **Validação:** Obrigatório, Número inteiro. 
     - **turma_id**: Relacionamento com a turma.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `turma`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `turma`. 
     - **disciplina_id**: Relacionamento com a disciplina.
-        - **Validação:** Opcional, Chave estrangeira para a coleção `disciplina`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `disciplina`. 
 
 ---
 
@@ -824,7 +824,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome da unidade temática.
-        - **Validação:** Obrigatório, Texto. 
+        - **Validação:** Obrigatório, Texto, mínimo 3 caracteres. 
     - **serie_id**: Relacionamento com a série.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `serie`. 
     - **disciplina_id**: Relacionamento com a disciplina.
@@ -894,10 +894,11 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **total_aulas**: Total de aulas no dia/disciplina. 
         - **Validação:** Obrigatório, Número inteiro (mínimo 0). 
     - **tipo_frequencia**: Tipo de frequência registrada. 
-        - **Validação:** Opcional, Seleção entre 'Diária' e 'Disciplinar'. 
+        - **Validação:** Obrigatório, Seleção entre 'Diária' e 'Disciplinar'. 
     - **professor_id**, **turma_id**, **etapa_id**, **escola_id**: Chaves estrangeiras obrigatórias para `professor`, `turma`, `etapa` e `escola`. 
     - **disciplina_id**: Relacionamento com a disciplina (opcional). 
         - **Validação:** Opcional, Chave estrangeira para `disciplina`. 
+
 
 ---
 
