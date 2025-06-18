@@ -192,15 +192,15 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome do curso.
-        - **Validação:** Obrigatório, Texto, Máximo de 10 caracteres.
+        - **Validação:** Obrigatório, String, Máximo de 255 caracteres.
     - **descricao**: Descrição do curso.
         - **Validação:** Opcional, Texto, Máximo de 360 caracteres.
     - **abreviacao**: Abreviação do nome do curso.
-        - **Validação:** Opcional, Texto.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres.
     - **nivel_ensino**: Nível de ensino do curso.
         - **Validação:** Obrigatório, Seleção entre 'Creche', 'Infantil', 'Fundamental', 'Médio', 'Superior'.
     - **regime_ensino**: Regime de ensino.
-        - **Validação:** Obrigatório, Seleção entre 'Presencial', 'Semipresencial', 'EAD'.
+        - **Validação:** Obrigatório, Seleção entre 'Presencial', 'Semipresencial' e 'EAD'.
     - **modalidade_curso**: Modalidade do curso.
         - **Validação:** Obrigatório, Seleção entre 'Ensino regular', 'Ensino especial', 'EJA', 'Profissionalizante'.
     - **carga_horaria**: Carga horária total do curso.
@@ -213,6 +213,13 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `instituicao`.
     - **regra_de_avaliacao_id**: Relacionamento com a regra de avaliação.
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `regra_de_avaliacao`.
+    - **date_created**: Campo apenas para visualização da data de criação do curso.
+    - **user_created**: Relacionamento com directus_users.
+    - **date_updated**: Campo apenas para visualização da data de atualização do curso.
+    - **user_updated**: Relacionamento com directus_users.
+    - **matricula**: Relacionamento com matricula através da chave forte 'curso_id'.
+    - **pre_matricula**: Relacionamento com pre_matricula através da chave forte 'curso_id'.
+    - **curso_escola**: Relacionamento com escola.
 
 ---
 
