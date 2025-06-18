@@ -70,7 +70,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **plano_de_saude**: Nome do plano de saúde.
         - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
     - **email**: E-mail do aluno.
-        - **Validação:** Opcional, Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
+        - **Validação:** Opcional, String, Máximo de 255 caracteres. Formato de e-mail válido `^[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,}$`.
     - **telefone**, **telefone2**: Telefones de contato.
         - **Validação:** Opcional, Formato de telefone válido `^\\(?\\d{2}\\)?\\s?\\d{4,5}-?\\d{4}$`.
     - **endereco**: Endereço do aluno.
