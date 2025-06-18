@@ -22,7 +22,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID).
         - **Validação:** Obrigatório, Único.
     - **nome**: Nome completo do aluno.
-        - **Validação:** Obrigatório, Texto, Máximo de 100 caracteres, Apenas letras e espaços.
+        - **Validação:** Obrigatório, String, Minímo 3 caracteres e Máximo de 100 caracteres, Apenas letras e espaços.
     - **data_de_nascimento**: Data de nascimento do aluno.
         - **Validação:** Obrigatório.
     - **sexo**: Sexo do aluno.
@@ -56,7 +56,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **autorizacao_medicacao_emergencia**: Autorização para medicação em emergências.
         - **Validação:** Opcional, Booleano (Verdadeiro/Falso).
     - **nome_contato_emergencia**: Nome do contato de emergência.
-        - **Validação:** Opcional, Texto, Máximo de 100 caracteres.
+        - **Validação:** Opcional, String, Minímo 3 caracteres e Máximo de 100 caracteres, Apenas letras e espaços.
     - **telefone_contato_emergencia**: Telefone do contato de emergência.
         - **Validação:** Opcional, Texto, Máximo de 15 caracteres.
     - **parentesco_contato_emergencia**: Parentesco do contato de emergência.
