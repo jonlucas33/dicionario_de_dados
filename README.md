@@ -908,9 +908,9 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (Integer). 
         - **Validação:** Obrigatório, Autoincremento, Único. 
     - **instituicao_id**: Relacionamento com a instituição. 
-        - **Validação:** Opcional, Chave estrangeira para a coleção `instituicao`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `instituicao`. 
     - **directus_users_id**: Relacionamento com o usuário. 
-        - **Validação:** Opcional, Chave estrangeira para a coleção `directus_users`. 
+        - **Validação:** Obrigatório, Chave estrangeira para a coleção `directus_users`. 
 
 ---
 
@@ -935,7 +935,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **id**: Identificador único (UUID). 
         - **Validação:** Obrigatório, Único. 
     - **nota**: Nota conceitual atribuída. 
-        - **Validação:** Obrigatório, Texto, Máximo de 3 caracteres. 
+        - **Validação:** Obrigatório, Seleção, Opções entre PC, PEC, PNC e NT. 
     - **unidade_tematica_id**: Relacionamento com a unidade temática. 
         - **Validação:** Obrigatório, Chave estrangeira para a coleção `unidade_tematica`. 
     - **nota_conceitual_id**: Relacionamento com o registro principal de nota conceitual. 
