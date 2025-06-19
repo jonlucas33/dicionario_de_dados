@@ -541,22 +541,21 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena informações complementares da escola, muitas delas relacionadas ao Censo Escolar.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **escola_id:**
     * **Descrição:** Relacionamento com a escola.
     * **Validação:** Obrigatório, Chave estrangeira para a coleção `escola`.
-* **status:**
-    * **Descrição:** Status do registro do censo.
-    * **Validação:** Opcional, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
 * **serializacao:**
     * **Descrição:** Tipo de seriação da escola.
     * **Validação:** Opcional, String.
-    * **Interface:** Botão de seleção única.
+    * **Interface:** Utilização de Botão de seleção única.
     * **Opções:** `Anual`, `Creche`.
 * **codigo_inep_escola_compartilhada:**
     * **Descrição:** Código INEP da outra escola com a qual o espaço é compartilhado.
@@ -567,17 +566,17 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **situacao_proprietaria:**
     * **Descrição:** Situação de propriedade do imóvel da escola.
     * **Validação:** Opcional, Seleção.
-    * **Interface:** Botão de seleção única.
+    * **Interface:** Utilização de Botão de seleção única.
     * **Opções:** `Própria`, `Alugada`.
 * **dependencia_administrativa:**
     * **Descrição:** Dependência administrativa da escola.
     * **Validação:** Opcional, Seleção.
-    * **Interface:** Seleção.
+    * **Interface:** Utilização de Seleção.
     * **Opções:** `Municipal`, `Estadual`, `Federal`, `Privada`.
 * **uso_propriedade:**
     * **Descrição:** Tipo de uso da propriedade pela escola.
     * **Validação:** Opcional, Seleção.
-    * **Interface:** Botão de seleção única.
+    * **Interface:** Utilização de Botão de seleção única.
     * **Opções:** `Exclusiva`, `Compartilhada`.
 * **escola_compartilhada:**
     * **Descrição:** Indica se o prédio é compartilhado com outra escola.
@@ -585,52 +584,52 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **tratamento_lixo:**
     * **Descrição:** Formas de tratamento do lixo utilizadas pela escola.
     * **Validação:** Opcional, Seleção.
-    * **Interface:** Seleção.
+    * **Interface:** Utilização de Seleção.
     * **Opções:** `Incineração`, `Aterro`, `Compostagem`, `Reciclagem`, `Outro`.
 * **salas_uso_geral:**
     * **Descrição:** Espaços de uso geral disponíveis na escola.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Sala de aula`, `Auditório`, `Espaços comuns`, `Almoxarifado`, `Biblioteca`, `Sala de professores`, `Banheiro`, `Banheiro acessível`, `Banheiro de professores`, `Cozinha`, `Dormitório de alunos`, `Dormitório de professores`, `Piscina`, `Refeitório`, `Pátio aberto`, `Pátio fechado`, `Quadra coberta`, `Quadra descoberta`, `Secretaria`, `Estacionamento`, `Cantina`.
 * **laboratorios:**
     * **Descrição:** Laboratórios disponíveis na escola.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Informática`, `Ciências`, `Multimídia`.
 * **tipos_conexao:**
     * **Descrição:** Tipos de conexão com a internet disponíveis.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Fibra ótica`, `Banda larga`, `Satélite`, `Outro`.
 * **dispositivos_usados_estudantes:**
     * **Descrição:** Dispositivos eletrônicos disponíveis para uso dos estudantes.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Computador`, `Tablet`, `Smartphone`.
 * **equipamentos_ensino:**
     * **Descrição:** Equipamentos de auxílio ao ensino disponíveis.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Projetor`, `DVD/Blu-ray`, `TV multimídia`, `Lousa digital`, `Sistema de som`.
 * **corpos_colegiados:**
     * **Descrição:** Órgãos colegiados em funcionamento na escola.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Associação de Pais`, `Associação de Pais e Mestres`, `Grêmio Estudantil`, `Conselho Escolar`, `Não há órgãos colegiados`.
 * **materiais_pedagogicos:**
     * **Descrição:** Materiais pedagógicos específicos disponíveis.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Arquivo multimídia`, `Brinquedos`, `Jogos educativos`, `Materiais científicos`, `Equipamentos de áudio`, `Instrumentos musicais`, `Materiais culturais/artísticos`, `Materiais de educação profissional`, `Materiais esportivos`, `Materiais educacionais indígenas`, `Materiais étnicos`, `Materiais educacionais do campo`, `Nenhum dos anteriores`.
 * **criterios_selecao:**
     * **Descrição:** Critérios utilizados para a seleção de alunos.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Análise curricular`, `Exame de seleção`, `Cotas`.
 * **linguagens_indigenas_disponiveis:**
     * **Descrição:** Línguas indígenas ensinadas na escola.
     * **Validação:** Opcional, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `Português`, `Ticuna`, `Guarani Kaiowá`, `Kaingang`, `Xavante`, `Yanomami`, `Outro`.
 * **salas_internas, salas_externas, salas_refrigeradas, salas_acessiveis:**
     * **Descrição:** Quantidade de salas por tipo.
@@ -641,8 +640,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **pessoal_administrativo, pessoal_ensino, pessoal_servicos_gerais, pessoal_seguranca, pessoal_gestao, pessoal_saude, pessoal_assistencia_social:**
     * **Descrição:** Quantidade de pessoal por função.
     * **Validação:** Opcional, Número inteiro (mínimo 0).
-* **demais campos booleanos:**
-    * **Descrição:** `tem_agua_potavel`, `tem_tratamento_esgoto`, `tem_eletricidade`, `esgoto_tratado_pela_escola`, `tem_servico_alimentacao`, `usa_espacos_externos`, `tem_espacos_comunitarios`, `localizacao_incomum`, `usa_regras_alternativas`, `faz_parte_de_rede`, `tem_internet`, `tem_rede_local`, `tem_assistencia_especializada`, `projeto_pedagogico_atualizado`, `tem_educacao_indigena`, `ligada_educacao_superior`.
+* **demais campos booleanos:** `tem_agua_potavel`, `tem_tratamento_esgoto`, `tem_eletricidade`, `esgoto_tratado_pela_escola`, `tem_servico_alimentacao`, `usa_espacos_externos`, `tem_espacos_comunitarios`, `localizacao_incomum`, `usa_regras_alternativas`, `faz_parte_de_rede`, `tem_internet`, `tem_rede_local`, `tem_assistencia_especializada`, `projeto_pedagogico_atualizado`, `tem_educacao_indigena`, `ligada_educacao_superior`.
     * **Validação:** Opcional, Booleano.
 
 ---
@@ -652,7 +650,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Tabela de junção que relaciona Escolas com Professores.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (Integer).
     * **Validação:** Obrigatório, Autoincremento, Único.
@@ -663,10 +660,10 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     * **Descrição:** Relacionamento com o professor.
     * **Validação:** Obrigatório, Chave estrangeira para a coleção `professor`.
 * **status:**
-    * **Descrição:** Status do relacionamento.
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
     * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`, `GRADUATED`, `SUSPENDED`, `TRANSFERRED`.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 
 ---
 
@@ -675,10 +672,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena as etapas (bimestres, trimestres, etc.) de um ano letivo.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **numero_etapa:**
     * **Descrição:** Número da etapa.
     * **Validação:** Obrigatório, Número inteiro (de 1 a 100).
@@ -691,11 +692,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **instituicao_id:**
     * **Descrição:** Relacionamento com a instituição.
     * **Validação:** Obrigatório, Chave estrangeira para a coleção `instituicao`.
-* **status:**
-    * **Descrição:** Status da etapa.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
 
 ---
 
@@ -704,20 +700,24 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena feedbacks (pareceres descritivos) sobre os alunos.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **aluno_id:**
-    * **Validação:** Chave estrangeira obrigatória para `aluno`.
+    * **Descrição:** Chave estrangeira obrigatória para `aluno`.
 * **matricula_id:**
-    * **Validação:** Chave estrangeira obrigatória para `matricula`.
+    * **Descrição:** Chave estrangeira obrigatória para `matricula`.
 * **escola_id:**
-    * **Validação:** Chave estrangeira obrigatória para `escola`.
+    * **Descrição:** Chave estrangeira obrigatória para `escola`.
 * **disciplina_id:**
-    * **Validação:** Chave estrangeira obrigatória para `disciplina`.
+    * **Descrição:** Chave estrangeira obrigatória para `disciplina`.
 * **professor_id:**
-    * **Validação:** Chave estrangeira obrigatória para `professor`.
+    * **Descrição:** Chave estrangeira obrigatória para `professor`.
 * **feedback_inicial:**
     * **Descrição:** Parecer descritivo inicial.
     * **Validação:** Opcional, Texto (máximo 1000 caracteres).
@@ -733,11 +733,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **inicial_atualizacao, parcial_atualizacao, final_atualizacao:**
     * **Descrição:** Datas da última atualização de cada parecer.
     * **Validação:** Opcional, Data e Hora.
-* **status:**
-    * **Descrição:** Status do feedback.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
+
+---
+
+### **frequencias**
+
+**Descrição:** Agrupamento para as coleções relacionadas a Frequência.
+
+**Campos:** Esta é uma coleção para agrupamento, não possui campos próprios.
 
 ---
 
@@ -746,10 +749,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena as possíveis funções para um servidor (funcionário).
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **nome:**
     * **Descrição:** Nome da função.
     * **Validação:** Obrigatório, String, Mínimo 3 e máximo 100 caracteres.
@@ -759,11 +766,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **descricao:**
     * **Descrição:** Descrição da função.
     * **Validação:** Opcional, Texto, Máximo de 255 caracteres.
-* **status:**
-    * **Descrição:** Status da função.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
 
 ---
 
@@ -772,14 +774,18 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena os horários das aulas.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **dias_da_semana:**
     * **Descrição:** Dia da semana da aula.
     * **Validação:** Obrigatório, JSON.
-    * **Interface:** Menu suspenso (Múltiplo).
+    * **Interface:** Utilização de Menu suspenso (Múltiplo).
     * **Opções:** `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, `SUNDAY`.
 * **inicio:**
     * **Descrição:** Horário de início da aula.
@@ -788,16 +794,11 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     * **Descrição:** Horário de término da aula.
     * **Validação:** Obrigatório, Data e Hora.
 * **turma_id:**
-    * **Validação:** Chave estrangeira obrigatória para `turma`.
+    * **Descrição:** Chave estrangeira obrigatória para `turma`.
 * **escola_id:**
-    * **Validação:** Chave estrangeira obrigatória para `escola`.
+    * **Descrição:** Chave estrangeira obrigatória para `escola`.
 * **disciplina_id:**
-    * **Validação:** Chave estrangeira obrigatória para `disciplina`.
-* **status:**
-    * **Descrição:** Status do horário.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
+    * **Descrição:** Chave estrangeira obrigatória para `disciplina`.
 
 ---
 
@@ -806,10 +807,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena informações sobre as instituições (redes de ensino).
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **nome:**
     * **Descrição:** Nome da instituição.
     * **Validação:** Obrigatório, String, Mínimo 3 e máximo 100 caracteres.
@@ -831,11 +836,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **endereco, cidade, estado:**
     * **Descrição:** Dados de localização da instituição.
     * **Validação:** Opcional, String.
-* **status:**
-    * **Descrição:** Status da instituição.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
 
 ---
 
@@ -844,18 +844,17 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena tipos de justificativa para ausências.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **nome:**
     * **Descrição:** Nome/descrição da justificativa.
     * **Validação:** Obrigatório, String, Mínimo 3 e máximo 100 caracteres.
-* **status:**
-    * **Descrição:** Status da justificativa.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
 
 ---
 
@@ -872,10 +871,14 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 **Descrição:** Armazena o registro de uma falta individual de um aluno em uma aula.
 
 **Campos:**
-
 * **id:**
     * **Descrição:** Identificador único (UUID).
     * **Validação:** Obrigatório, Único.
+* **status:**
+    * **Descrição:** Status do registro para controle de versionamento e soft delete.
+    * **Validação:** Obrigatório, String.
+    * **Interface:** Utilização de Seleção.
+    * **Opções:** `Publicado`, `Rascunho`, `Arquivado`.
 * **nome:**
     * **Descrição:** Nome/descrição do registro de falta (gerado automaticamente).
     * **Validação:** Obrigatório, String, Mínimo 3 e máximo 100 caracteres.
@@ -885,11 +888,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 * **frequencia_id:**
     * **Descrição:** Relacionamento com o registro de frequência da aula.
     * **Validação:** Obrigatório, Chave estrangeira para a coleção `frequencia`.
-* **status:**
-    * **Descrição:** Status do registro de falta.
-    * **Validação:** Obrigatório, String.
-    * **Interface:** Seleção.
-    * **Opções:** `ACTIVE`, `INACTIVE`.
 
 ---
 
