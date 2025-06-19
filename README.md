@@ -554,7 +554,7 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
     - **codigo_inep_escola_compartilhada**: Código INEP da outra escola com a qual o espaço é compartilhado.
         - **Validação:** Opcional, Texto. 
     - **tratamento_lixo**: Forma de tratamento do lixo.
-        - **Validação:** Opcional, Seleção entre 'Incineração', 'Aterro', 'Compostagem', 'Outro'. 
+        - **Validação:** Opcional, Seleção entre 'Reciclagem', 'Incineração', 'Aterro', 'Compostagem', 'Outro'. 
     - **salas_uso_geral**, **laboratorios**, **tipos_conexao**, **dispositivos_usados_estudantes**, **equipamentos_ensino**, **corpos_colegiados**, **materiais_pedagogicos**, **criterios_selecao**, **linguagens_indigenas_disponiveis**: Campos de seleção múltipla sobre recursos disponíveis.
         - **Validação:** Opcional, JSON (Array de Strings). 
     - **salas_internas**, **salas_externas**, **salas_refrigeradas**, **salas_acessiveis**, **desktops_disponiveis**, **laptops_disponiveis**, **tablets_disponiveis**, **pessoal_administrativo**, **pessoal_ensino**, **pessoal_servicos_gerais**, **pessoal_seguranca**, **pessoal_gestao**, **pessoal_saude**, **pessoal_assistencia_social**: Campos numéricos sobre a quantidade de recursos.
@@ -605,12 +605,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 
 ---
 
-### **frequencias**
-- **Descrição:** Agrupamento para as coleções relacionadas a Frequência.
-- **Campos:** Esta é uma coleção para agrupamento, não possui campos próprios. 
-
----
-
 ### **funcao_servidor**
 - **Descrição:** Armazena as possíveis funções para um servidor.
 - **Campos:**
@@ -622,12 +616,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
         - **Validação:** Obrigatório, Texto, Máximo de 6 caracteres. 
     - **descricao**: Descrição da função.
         - **Validação:** Opcional, Texto, Máximo de 255 caracteres. 
-
----
-
-### **horario_e_etapa**
-- **Descrição:** Agrupamento para as coleções de Horários e Etapas.
-- **Campos:** Esta é uma coleção para agrupamento, não possui campos próprios. 
 
 ---
 
@@ -680,12 +668,6 @@ Este dicionário descreve as coleções (tabelas) e seus respectivos campos, inc
 
 ### **matriculas**
 - **Descrição:** Agrupamento para as coleções de Matrículas.
-- **Campos:** Esta é uma coleção para agrupamento, não possui campos próprios. 
-
----
-
-### **notas_e_avaliacoes**
-- **Descrição:** Agrupamento para as coleções relacionadas a notas e avaliações.
 - **Campos:** Esta é uma coleção para agrupamento, não possui campos próprios. 
 
 ---
